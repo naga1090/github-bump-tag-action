@@ -23,7 +23,7 @@ jobs:
           ref: ${{ github.event.pull_request.merge_commit_sha || github.sha }}
 
       - name: Bump version and push tag
-        uses: naga1090/github-bump-tag-action@main
+        uses: naga1090/github-bump-tag-action@0.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
