@@ -83,7 +83,7 @@ Include a token in your commit message to control which part is bumped:
 | `#minor` | `1.0.0` → `1.1.0` |
 | `#patch` | `1.0.0` → `1.0.1` |
 | `#none` | No tag created |
-| _(nothing)_ | Uses `DEFAULT_BUMP` (default: `minor`) |
+| _(nothing)_ | Uses `DEFAULT_BUMP` (default: `patch`) |
 
 If multiple tokens are present, the highest-ranking one wins.
 
@@ -94,7 +94,7 @@ All options are set via environment variables.
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `GITHUB_TOKEN` | Yes | — | Token with `contents: write` permission |
-| `DEFAULT_BUMP` | No | `minor` | Bump type when no token is in the commit message. Set to `none` to disable automatic bumping. |
+| `DEFAULT_BUMP` | No | `patch` | Bump type when no token is in the commit message. Set to `none` to disable automatic bumping. |
 | `DEFAULT_BRANCH` | No | `$GITHUB_BASE_REF` | The base/default branch. Auto-detected on PRs. Override if your default branch is not `main` or `master`. |
 | `TAG_PREFIX` | No | _(none)_ | Prefix added to every tag, e.g. `v` produces `v1.2.3`. Only tags matching this prefix are considered. |
 | `WITH_V` | No | `false` | Deprecated. Use `TAG_PREFIX=v` instead. |
